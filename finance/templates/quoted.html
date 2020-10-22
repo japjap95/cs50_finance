@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+        <div class="form-group">
+            Current trading price of {{ symbol }} is {{ share_price }}
+        </div>
+        <a href="http://b4b7336c-1431-40ae-bd07-8a0e39633b84-ide.cs50.xyz/buy">
+            <button class="btn btn-primary" type="submit">
+            Go to purchase page
+            </button>
+        </a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy shares
+{% endblock %}
+
+{% block main %}
+        <div class="form-group">
+            Successfully purchased {{share_quantity}} share(s) of {{stock}} for {{total_price}}
+        </div>
+        <a href="http://b4b7336c-1431-40ae-bd07-8a0e39633b84-ide.cs50.xyz/">
+        <button class="btn btn-primary" type="submit">
+            Go to home page
+        </button>
+        </a>
+{% endblock %}

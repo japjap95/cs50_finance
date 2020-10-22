@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="form-group">
+        <h3>Welcome {{name}}</h3>
+        <h4>Your trading history is as follows:</h4>
+        <br>
+        <table class = "table">
+            <thead class = "thead-dark">
+            <tr>
+                <th>Ticker</th>
+                <th>Shares</th>
+                <th>Action</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Transacted</th>
+            </tr>
+            </thead>
+            {% for date in datetime %}
+            <tr>
+                <th>{{tickers[date]}}</th>
+                <th>{{shares[date]}}</th>
+                <th>{{actions[date]}}</th>
+                <th>{{prices[date]}}</th>
+                <th>{{totals[date]}}</th>
+                <th>{{datetime[date]}}</th>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

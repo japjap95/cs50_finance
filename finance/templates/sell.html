@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell shares
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <div class="form-group">
+            <select  class="form-control" name="symbol" id="symbol" placeholder="Symbol">
+                <option disabled selected value="">Stock</option>
+                {% for stock in owned_stocks %}
+                <option value = "{{stock}}" > {{stock}} </option>
+                {% endfor %}
+            </select>
+        </div>
+        <h5 id="demo"></h5>
+        <br>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" id = "shares" name="shares" placeholder="Enter share quantity" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+    <script>
+        // document.getElementById("stockname").addEventListener("click", function() {
+        // var text = document.getElementById("stockname").value;
+        // document.getElementById("demo").innerHTML = text;
+        // });
+    </script>
+{% endblock %}
